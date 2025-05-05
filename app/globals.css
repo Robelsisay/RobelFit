@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: #f9fafb;
+}
+
+/* Custom form styling */
+input,
+textarea,
+select {
+  @apply border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+}
+
+/* Custom animation for collapsible sections */
+.collapsible-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.collapsible-content.open {
+  max-height: 1000px;
+  transition: max-height 0.5s ease-in;
+}
+
+/* Custom styling for workout cards */
+.workout-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.workout-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Custom styling for YouTube links */
+.youtube-link {
+  @apply text-blue-600 hover:text-blue-800 transition-colors flex items-center;
+}
+
+.youtube-link svg {
+  @apply ml-1 h-4 w-4;
+}
+
+/* Gym background styling */
+.gym-background {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/gym-background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+}
+
+.gym-background h1,
+.gym-background h2,
+.gym-background h3,
+.gym-background p {
+  color: white;
+}
+
+.content-section {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  color: #1a202c;
+}
+
+.content-section h1,
+.content-section h2,
+.content-section h3,
+.content-section p {
+  color: #1a202c;
+}
